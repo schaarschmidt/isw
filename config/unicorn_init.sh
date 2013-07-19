@@ -5,7 +5,7 @@ set -e
 
 # Feel free to change any of the following variables for your app:
 TIMEOUT=${TIMEOUT-60}
-APP_ROOT=/home/nmaef/app/internationales-saaleschwimmen
+APP_ROOT=/home/nmaef/app/isw
 PID=$APP_ROOT/tmp/pids/unicorn.pid
 CMD="/home/nmaef/.rbenv/shims/unicorn -D -c $APP_ROOT/config/unicorn.rb -E production"
 INIT_CONF=$APP_ROOT/config/init.conf
