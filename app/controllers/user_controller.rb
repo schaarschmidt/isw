@@ -12,6 +12,12 @@ class UserController < ApplicationController
       tmp_path = "/tmp/#{SecureRandom.hex(16)}"
       system "mkdir #{tmp_path}"
 
+      if 600 == @user.result.competition 
+        @strecke = "Kr\"ollwitzer Br\"ucke"
+      else
+        @strecke = "Schleuse Gimritz"
+      end
+
       tpl_urkunde = File.open("#{Rails.root}/app/views/user/urkunde.tex.erb").read
       erb = ERB.new tpl_urkunde
       File.open("#{tmp_path}/urkunde.tex","w+") do |file|
