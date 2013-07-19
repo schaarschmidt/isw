@@ -9,7 +9,7 @@ class UserController < ApplicationController
     respond_to do |format|
       @user = User.find current_user.id
 
-      tmp_path = "/tmp/export/#{SecureRandom.hex(16)}"
+      tmp_path = "/tmp/#{SecureRandom.hex(16)}"
       system "mkdir #{tmp_path}"
 
       tpl_urkunde = File.open("#{Rails.root}/app/views/user/urkunde.tex.erb").read
