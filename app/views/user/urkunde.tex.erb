@@ -1,0 +1,16 @@
+\documentclass[12pt]{scrartcl}
+\usepackage{primaer}
+
+\graphicspath{{/usr/local/images/saaleschwimmen/}}
+\begin{document}
+
+
+%\eintrag{Name}{Geburtsjahr, opt.}{Verein, opt.}{Platz}{Zeit}{Foto, opt.}
+
+%\eintrag{Bettina Reinhardt}{1971}{}{47}{0:26:16,64}{u_foto}
+\eintrag{<%= @user.firstname %> <%= @user.lastname %>}{<%= @user.result.competition%>}{<%= @user.club %>}{<%= @user.result.rank %>}{<%= @user.result.time %>}{}
+%\eintrag{Bettina Reinhardt}{1971}{}{47}{0:26:16,64}{u_foto}
+
+
+\end{document}
+

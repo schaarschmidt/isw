@@ -11,4 +11,13 @@ gem 'less-rails', '~> 2.3.0'
 gem 'simple_form', '3.0.0.rc'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.4.0'
-#gem 'unicorn'
+gem 'unicorn'
+gem 'turbolinks'
+
+group :development do
+  gem 'seed_dump'
+  gem 'awesome_print'
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end

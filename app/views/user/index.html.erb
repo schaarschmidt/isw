@@ -1,0 +1,39 @@
+<div class='hero-unit' style="margin-top: 20%; text-align: center;">
+
+  <h3>Ihr Ergebnis</h3>
+  <br />
+
+  <table  class="table">
+    <tr>
+      <td><strong>Name: </strong></td>
+      <td><%= "#{@user.firstname} #{@user.lastname}"%></td>
+    </tr>
+    <tr>
+      <td><strong>Verein: </strong></td>
+      <td><%= @user.club %></td>
+    </tr>
+    <tr>
+      <td><strong>Wettkampfdistanz:</strong></td>
+      <td><%= @user.result.competition %></td>
+    </tr>
+    <tr>
+      <td><strong>Altersklasse: </strong></td>
+      <td><%= @user.agegroup %></td>
+    </tr>
+    <tr>
+      <td><strong>Platz innerhalb Ihrer Altersklasse: </strong></td>
+      <td><%= @user.result.agegrouprank %>. Platz</td>
+    </tr>
+    <tr>
+      <td><strong>Gesamtplatzierung: </strong></td>
+      <td><%= @user.result.rank %>. Platz</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+  <td>
+    <%= link_to 'Urkunde laden', '/user/urkunde.pdf', :class => 'btn btn-success' %>
+  </td>
+</div>

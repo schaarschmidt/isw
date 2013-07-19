@@ -1,0 +1,14 @@
+<div class='hero-unit' style="margin-top: 20%;">
+  <p class='text-error'> <%= @notice %> </p>
+
+
+  <%= simple_form_for @user,
+    url: login_index_path,
+    method: :post,
+    html: { class: 'form-inline' } do |f| %>
+      <%= f.input :startnumber, collection: 1..200, prompt: "Startnummer", label: false, input_html: { class: 'span2' } %>
+      <%= f.input :year_of_birth, collection: 1937..2003, prompt: "Geburtsjahr", label: false, input_html: { class: 'span2' } %>
+      <%= f.submit "Ergebnis anzeigen!", class: "btn btn-success" %>
+  <% end %>
+
+</div>
