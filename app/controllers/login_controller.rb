@@ -6,11 +6,15 @@ class LoginController < ApplicationController
 
   def create
 
-    @user = User.where("startnumber = ? and year_of_birth = ?", user_params[:startnumber], user_params[:year_of_birth]).first
+    #@user = User.where("startnumber = ? and year_of_birth = ?", user_params[:startnumber], user_params[:year_of_birth]).first
+    user = User.find_by_startnumber user_params[:startnumber]
 
-    if @user 
-      session[:user_id] = @user.id
+    if user && user.year_of_birth == user_params[:year_of_birth]
+      session[:user_id] = user.id
       redirect_to user_index_path
+    else
+      flash.now.alert = "Die ausgewählte Startnummer und das Geburtsdatum passen nicht zusammen"
+      redirect_to login_index_path
     end
    
 
