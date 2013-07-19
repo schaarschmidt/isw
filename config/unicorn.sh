@@ -4,11 +4,11 @@
 # # (nginx and unicorn).
 # #
 
-working_directory "/home/nmaef/app/internationales-saaleschwimmen"
-pid "/home/nmaef/app/internationales-saaleschwimmen/tmp/pids/unicorn.pid"
-stderr_path "/home/nmaef/app/internationales-saaleschwimmen/log/unicorn.log"
-stdout_path "/home/nmaef/app/internationales-saaleschwimmen/log/unicorn.log"
+working_directory "/home/nmaef/app/isw"
+pid "/home/nmaef/app/isw/tmp/pids/unicorn.pid"
+stderr_path "/home/nmaef/app/isw/log/unicorn.log"
+stdout_path "/home/nmaef/app/isw/log/unicorn.log"
 
-listen "/home/nmaef/app/internationales-saaleschwimmen/tmp/sockets/unicorn.sock"
+listen "/home/nmaef/app/isw/tmp/sockets/unicorn.sock"
 worker_processes 2
 timeout 15
