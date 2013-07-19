@@ -16,3 +16,5 @@
 /tmp
 /config/database.yml
 /db/seed.rb
+/db/seeds.rb
+/public/assets
