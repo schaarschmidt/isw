@@ -9,7 +9,7 @@ class LoginController < ApplicationController
     #@user = User.where("startnumber = ? and year_of_birth = ?", user_params[:startnumber], user_params[:year_of_birth]).first
     user = User.find_by_startnumber user_params[:startnumber]
 
-    if user && user.year_of_birth == user_params[:year_of_birth]
+    if user && user.year_of_birth == user_params[:year_of_birth].to_i
       session[:user_id] = user.id
       redirect_to user_index_path
     else
