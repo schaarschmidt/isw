@@ -13,7 +13,7 @@ class UserController < ApplicationController
       system "mkdir #{tmp_path}"
 
       if 600 == @user.result.competition 
-        @strecke = "Kr\"ollwitzer Br\"ucke"
+        @strecke = 'Kr\"ollwitzer Br\"ucke'
       else
         @strecke = "Schleuse Gimritz"
       end
